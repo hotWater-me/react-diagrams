@@ -1,6 +1,11 @@
 {
 	"compileOnSave": false,
 	"compilerOptions": {
+		"baseUrl": "../",
+		"paths": {
+			"@projectstorm/react-diagrams": ["./packages/react-diagrams/dist/@types/index"],
+			"@projectstorm/react-diagrams-core": ["./packages/react-diagrams-core/dist/@types/index"]
+		},
 		"suppressExcessPropertyErrors": true,
 		"declaration": true,
 		"composite": true,
@@ -9,15 +14,11 @@
 		"sourceMap": true,
 		"skipLibCheck": true,
 		"jsx": "react",
-		"target": "ES6",
-		"module": "commonjs",
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "Node",
 		"strict": false,
-		"lib": [
-			"DOM",
-			"ES6"
-		]
+		"lib": ["DOM", "ES6"]
 	},
-	"include": [
-		"demos"
-	]
+	"include": ["demos"]
 }
